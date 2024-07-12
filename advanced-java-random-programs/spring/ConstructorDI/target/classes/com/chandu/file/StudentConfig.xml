@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:c="http://www.springframework.org/schema/c"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+            <context:property-placeholder location="com/chandu/file/Student.properties"/>
+<bean class="com.chandu.model.Student" id="student1"></bean>
+<bean class="com.chandu.model.Student"  name="student">
+<constructor-arg value="101"></constructor-arg>
+<constructor-arg value="raju"></constructor-arg>
+<constructor-arg value="90.8"></constructor-arg>
+<constructor-arg value="raju@rani"></constructor-arg>
+</bean>
+<bean class="com.chandu.model.Addresss" name="address1">
+<constructor-arg value="${pin}"></constructor-arg>
+<constructor-arg value="${Street}"></constructor-arg>
+<constructor-arg value="${State}"></constructor-arg>
+<constructor-arg value="${city}"></constructor-arg>
+</bean>
+<bean class="com.chandu.model.Addresss" name="address2" c:pin="78790" c:state="ap" c:street="kbhb" c:city="hyd">
+</bean>
+</beans>
