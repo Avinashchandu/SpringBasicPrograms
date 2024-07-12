@@ -1,0 +1,41 @@
+class Train
+{
+	public static String stationName = "Kurnool";
+	public String destination ;
+	public String trainName;
+	public int speed;
+	public int distance;
+	public void intializeInfo(String a,String b,int c,int d)
+	{
+		trainName = a;
+		destination = b;
+		speed = c;
+		distance = d;
+	}
+	public void displayInfo()
+	{
+     System.out.println("Train "+trainName+" travelled from "+stationName+" to "+destination+" covering a distance of "+distance+" kms at a speed of "+speed+" kms/hr");
+	}
+	public void timeTaken()
+	{
+		double time = distance/speed;
+		System.out.println("Time taken by train "+trainName+" is "+time+" hrs.");
+	}
+
+
+}
+class  MainClassRailway
+{
+	public static void main(String[] args) 
+	{
+		Train train1 = new Train();
+		Train train2 = new Train();
+		train1.intializeInfo("Vishaka Express","Vishakapatnam",60,600);
+		train1.displayInfo();
+		train1.timeTaken();
+		train2.intializeInfo("Hyderabad Express","Hyderbad",50,350);
+		train2.displayInfo();
+		train2.timeTaken();
+
+	}
+}

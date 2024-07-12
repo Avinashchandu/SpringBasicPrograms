@@ -1,0 +1,50 @@
+class FirstThing
+{
+	public static void Drinking()
+	{
+    System.out.println("And then drinking Water");
+	}
+	public static void faceWash()
+	{
+     System.out.println("Washing my face");
+	 Drinking();/*L1
+	}
+}
+class Jog
+{
+	public void park()
+	{
+    System.out.println("I was jogging in park after");
+	road();
+	}
+	public void road()
+	{
+    System.out.println("after jogging on road");
+	}
+}
+class WakeUP
+{
+	public static void five0Clock()
+	{
+		System.out.println("I woke at 5 AM and then");
+		FirstThing.faceWash();
+	}
+	public void ready()
+	{
+		System.out.println("then getting ready");
+		Jog a = new Jog();
+		a.park();
+	}
+}
+class  MainProg8
+{
+	public static void main(String[] args) 
+	{
+		//System.out.println("Main Starts");
+		WakeUP.five0Clock();
+		WakeUP a = new WakeUP();
+		a.ready();
+		//System.out.println("Main ends");
+
+	}
+}
